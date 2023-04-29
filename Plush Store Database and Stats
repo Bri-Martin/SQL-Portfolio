@@ -1,0 +1,25 @@
+-- Create a Plush Store Database
+
+CREATE TABLE Plush_Store (ID INTEGER PRIMARY KEY, Item TEXT, Price INTEGER, Inches INTEGER, Available INTEGER);
+
+INSERT INTO Plush_Store VALUES (1, "Duck", 20, 3, 15);
+INSERT INTO Plush_Store VALUES (2, "Rabbit", 20, 9, 20);
+INSERT INTO Plush_Store VALUES (3, "Frog", 30, 7, 30);
+insert into Plush_Store Values (4, "Cat" , 20, 3, 31);
+ INSERT INTO Plush_Store VALUES (5, "Moose", 15, 2,27);
+INSERT INTO Plush_Store VALUES (6, "Dog", 30, 3, 32);
+insert into Plush_Store Values (7, "Snail" , 15, 4, 40);
+INSERT INTO Plush_Store VALUES (8, "Koala", 18, 4,43);
+INSERT INTO Plush_Store VALUES (9, "Rabbit", 20,4,45);
+INSERT INTO Plush_Store VALUES (10, "Hamster", 17,4,42);
+insert into Plush_Store Values (11, "Parrot", 15, 4, 4);
+ INSERT INTO Plush_Store VALUES (12, "Crocodile", 25,4,44);
+INSERT INTO Plush_Store VALUES (13, "Fish", 30, 4 ,54 );
+insert into Plush_Store Values (14, "Turtle", 25, 6 , 41);
+insert into Plush_Store Values (15, "Monkey", 15, 4, 8);
+
+--Display database ordered by price 
+SELECT * FROM Plush_Store WHERE Price order by Price asc;
+
+--Display database Sum of Available Plush
+SELECT Sum(Available) FROM Plush_Store;
