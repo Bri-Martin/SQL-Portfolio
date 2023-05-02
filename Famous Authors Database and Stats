@@ -1,0 +1,34 @@
+/* Famous Authors Database */
+CREATE TABLE Famous_Authors (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    birthplace INTEGER);
+    
+    INSERT INTO Famous_Authors (name, birthplace) VALUES ("Alice Walker", "Eatonton, GA");
+INSERT INTO Famous_Authors (name, birthplace) VALUES ("Stephen King", "Portland, ME");
+INSERT INTO Famous_Authors (name, birthplace) VALUES ("Virginia Woolf", "Kensington, London, United Kingdom");
+INSERT INTO Famous_Authors (name, birthplace) VALUES ("Shel Silverstein", "Chicago, IL");
+INSERT INTO Famous_Authors (name, birthplace) VALUES ("Mark Twain" , "Florida, MO");
+INSERT INTO Famous_Authors (name, birthplace) VALUES ("Roald Dahl", "Llandaff, Cardiff, United Kingdom");
+INSERT INTO Famous_Authors (name, birthplace) VALUES ("Sarah Dessen" , "Evanston, IL");
+INSERT INTO Famous_Authors (name, birthplace) VALUES ("Patricia Highsmith", "Fort Worth, TX");
+    
+
+
+CREATE TABLE Book_Titles (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    book_titles INTEGER);
+    
+    INSERT INTO Book_Titles (name, book_titles) VALUES ("Alice Walker", "The Color Purple");
+INSERT INTO Book_Titles (name, book_titles) VALUES ("Stephen King", "IT");
+INSERT INTO Book_Titles (name, book_titles) VALUES ("Virginia Woolf", "Mrs. Dalloway");
+INSERT INTO Book_Titles (name, book_titles) VALUES ("Shel Silverstein", "Falling Up");
+INSERT INTO Book_Titles (name, book_titles) VALUES ("Mark Twain" , "Huckleberry Finn");
+INSERT INTO Book_Titles (name, book_titles) VALUES ("Roald Dahl", "The Witches");
+INSERT INTO Book_Titles (name, book_titles) VALUES ("Sarah Dessen" , "Just Listen");
+INSERT INTO Book_Titles (name, book_titles) VALUES ("Patricia Highsmith", "The Price of Salt");
+    
+Select famous_authors.name, book_titles.book_titles From famous_authors Join book_titles On famous_authors.id = book_titles.id;
+
+Select famous_authors.name, book_titles.book_titles , birthplace From famous_authors Join book_titles On famous_authors.id = book_titles.id;
