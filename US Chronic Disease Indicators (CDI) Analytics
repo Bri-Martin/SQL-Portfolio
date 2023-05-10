@@ -1,0 +1,26 @@
+# For this project, I downloaded US Chronic Disease Indicators (CDI) data from Data.gov.
+In this SQL code, I am querying a database that's holding US Chronic Disease Indicators (CDI) data to answer questions about that data.
+
+#1.  What LocationDesc and Questions were presented under the Topic of Diabetes?
+
+SELECT LocationDesc, Topic, Question From BIT_DB."US_Chronic_ Disease"
+Where Topic = 'Diabetes';
+
+#2. What is the total amount of Asthma topics?
+
+SELECT Count(Topic) From BIT_DB."US_Chronic_ Disease"
+Where Topic = 'Asthma;
+
+#3. How would you select the Data Source if it were by Death Certificate?
+
+SELECT * From BIT_DB."US_Chronic_ Disease"
+Where DataSource = 'Death Certificate';
+
+#4. What does the Year Start of 2010 look like with the Topic of Cancer?
+
+SELECT * From BIT_DB."US_Chronic_ Disease"
+Where Topic = 'Cancer' and YearStart = '2010';
+
+#5.
+
+
