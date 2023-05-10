@@ -1,0 +1,42 @@
+-- In this SQL code, I am querying a database that's holding US Baby Names data to answer questions about that data.
+
+#1. How many babies were born in 1993 with the name Brianna?
+
+Select * From NationalNames
+Where Name = 'Brianna' and Year = 1993;
+
+#2. How many babies were born with the name Brianna in NE?
+
+Select * From StateNames
+Where Name = 'Brianna' and Year = 1993 and State = 'NE';
+
+#3. What state has the most 'a' names?
+
+Select * From StateNames
+Where Name like 'a%'
+Order by Count desc;
+
+#4. What is the total amount of Samantha's in the US?
+
+Select SUM(Count) From NationalNames
+Where Name = 'Samantha';
+
+#5. How many babies where born in 1960 with the name Mary?
+
+Select * From NationalNames
+Where Year = 1960 and Name = 'Mary';
+
+#6. What is the total amount of names that start with the letter 'O'?
+
+Select SUM(Count) From NationalNames
+Where Name like 'O%';
+
+#7. What State has the most Gregs?
+
+Select SUM(Count), State From StateNames
+Where Name = 'Greg';
+
+#8. How many baby names where there in Minnesota in 1989?
+
+Select * From StateNames
+Where Year= 1989 and State = 'MN';
