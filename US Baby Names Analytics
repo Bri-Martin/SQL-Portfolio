@@ -1,3 +1,4 @@
+# For this project, I downloaded US Baby Names data from kaggle.com.
 -- In this SQL code, I am querying a database that's holding US Baby Names data to answer questions about that data.
 
 #1. How many babies were born in 1993 with the name Brianna?
