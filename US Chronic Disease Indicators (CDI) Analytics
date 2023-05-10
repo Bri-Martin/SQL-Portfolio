@@ -21,6 +21,15 @@ Where DataSource = 'Death Certificate';
 SELECT * From BIT_DB."US_Chronic_ Disease"
 Where Topic = 'Cancer' and YearStart = '2010';
 
-#5.
+#5. Display Question, High Confidence Limit, and Topic where the topic is alcohol.
+
+SELECT Question, HighConfidenceLimit, Topic From BIT_DB."US_Chronic_ Disease"
+Where Topic = 'Alcohol';
+
+#6. Alphabetize The DataSource.
+
+SELECT * From BIT_DB."US_Chronic_ Disease"
+Order by  DataSource asc;
+
 
 
